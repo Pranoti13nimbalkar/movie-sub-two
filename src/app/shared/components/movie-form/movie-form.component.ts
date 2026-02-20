@@ -60,6 +60,8 @@ editId!:string
       this._animalServ.createAnimals(animalObj).subscribe({
         next: res=>{
           this._animalServ.setNewANimal({...animalObj, id:res.name})
+          this.animalsForm.reset()
+          
         },
         error: err=>{
           console.log(err);

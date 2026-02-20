@@ -35,7 +35,7 @@ export class MovieCardComponent implements OnInit {
    matConfig.data=`Are you sure, you want to remove animal with id ${this.animalObj.id}`,
    matConfig.width= '400px',
    matConfig.disableClose= true
-   this._dailog.open(GetConfirmComponent).afterClosed().pipe(
+   this._dailog.open(GetConfirmComponent,matConfig).afterClosed().pipe(
     filter(res=> res===true),
     switchMap(()=>{  
       return this._animalServ.removeAnimal(this.animalObj.id)

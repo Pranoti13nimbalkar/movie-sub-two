@@ -10,7 +10,8 @@ export class GetConfirmComponent implements OnInit {
 msg!:string
   constructor(private _matDailogRef: MatDialogRef<GetConfirmComponent>,
     @Inject(MAT_DIALOG_DATA) data : string
-  ) { this.msg=data}
+  ) {console.log(this.msg=data);
+  }
 
   ngOnInit(): void {
   }
