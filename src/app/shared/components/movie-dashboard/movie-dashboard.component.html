@@ -1,0 +1,10 @@
+<div class="row my-5">
+    <div class="col-md-8 offset-md-2">
+        <app-movie-form></app-movie-form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let animals of animalsArr ; trackBy : TrackById">
+        <app-movie-card [animalObj]="animals"></app-movie-card>
+    </div>
+</div>

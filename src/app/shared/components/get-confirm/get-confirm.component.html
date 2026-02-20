@@ -1,0 +1,8 @@
+<p [innerHTML]="msg" *ngIf="msg ; else noMsg"></p>
+<ng-template #noMsg>
+    <p >Are You sure, you want to Remove??</p>
+</ng-template>
+<div class="d-flex justify-content-between">
+    <button mat-raised-button color="primary" (click)="onClose(true)">Yes</button>
+    <button mat-raised-button color="warn" (click)="onClose(false)">No</button>
+</div>

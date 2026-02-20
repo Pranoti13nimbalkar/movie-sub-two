@@ -1,0 +1,22 @@
+
+.card{
+   background-image: linear-gradient(rgb(219, 242, 108),rgb(87, 236, 234),white);
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   height: 300px;
+  max-width: 350px;
+  width: 100%;
+   
+}
+
+.img{
+     width: 70%;
+    height: 70%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+}

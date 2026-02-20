@@ -1,0 +1,29 @@
+
+<mat-card>
+    <mat-card-content>
+        <h2 class="text-danger">{{isinEditMode? 'Update Animals' : 'Add Animals'}}</h2>
+        <form [formGroup]="animalsForm" (ngSubmit)="onAdd()">
+            <div class="form-group">
+                <label for="title">Title*</label>
+                <input type="text" class="form-control" formControlName="title">
+            </div>
+             <div class="form-group">
+                <label for="description">Description*</label>
+                <textarea rows="3" type="text" class="form-control" formControlName="description"></textarea>
+            </div>
+             <div class="form-group">
+                <label for="imageUrl">ImageUrl*</label>
+                <input type="text" class="form-control" formControlName="imageUrl" placeholder="ImageUrl">
+            </div>
+             <div class="form-group">
+                <label for="isWild">IsWild*</label>
+                <select type="text" class="form-control" formControlName="isWild" >
+                    <option [ngValue]="true">Yes</option>
+                    <option [ngValue]="false">No</option>
+                </select>
+            </div>
+            <button *ngIf="!isinEditMode"  mat-raised-button color="primary" class="w-100">Add Animals</button>
+            <button *ngIf="isinEditMode" (click)="onUpdate()" type="button" mat-raised-button color="primary" class="w-100">Update Animals</button>
+        </form>
+    </mat-card-content>
+</mat-card>
